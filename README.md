@@ -156,15 +156,13 @@ plt.show()
 
 ## OUTPUT:
 <img width="635" height="697" alt="image" src="https://github.com/user-attachments/assets/bd0338ba-fe8e-4cae-90d8-d5b095f98e53" />
-![Uploading image.png…]()
+<img width="656" height="761" alt="image" src="https://github.com/user-attachments/assets/006130db-40ad-4c9b-a9e4-4c2d020db7e3" />
+<img width="434" height="351" alt="image" src="https://github.com/user-attachments/assets/742df643-0f77-4fb3-bc3c-269ccebac131" />
+<img width="1024" height="633" alt="image" src="https://github.com/user-attachments/assets/2bf7073d-72ac-43e8-9fd1-9e4557d91654" />
+<img width="1039" height="639" alt="image" src="https://github.com/user-attachments/assets/609d9618-b76d-473b-ac73-75ea4eaece98" />
+<img width="1018" height="610" alt="image" src="https://github.com/user-attachments/assets/6770bc71-e142-4ad0-90ff-ef293a85241b" />
+<img width="1025" height="620" alt="image" src="https://github.com/user-attachments/assets/324d992e-4eb0-446c-afbc-9c836a10f45d" />
 
-![Uploading image.png…]()
-![Uploading image.png…]()
-
-![Uploading image.png…]()
-![Uploading image.png…]()
-![Uploading image.png…]()
-![Uploading image.png…]()
 
 
 ## RESULT:
