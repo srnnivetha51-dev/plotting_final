@@ -1,6 +1,6 @@
 # # Exp 6 Analysis and Visualization of COVID-19 Dataset using Python
 
-**Date:**
+**Date:24/08/2026
 
 ## AIM:
 
@@ -51,12 +51,121 @@ Add appropriate titles, axis labels, legends, and other necessary labels to the 
 Execute the program and analyze the generated visualizations to identify meaningful trends and relationships in the COVID-19 dataset.
 
 ## PROGRAM:
+```
+import pandas as pd
+import matplotlib.pyplot as plt
 
-*(Paste the Python code for COVID-19 Dataset Analysis and Visualization here.)*
+# Load the COVID-19 dataset
+df = pd.read_csv("covid_case.csv")
+
+# Display first 5 records
+print("First 5 Records:")
+print(df.head())
+
+# Dataset information
+print("\nDataset Information:")
+print(df.info())
+
+# Check missing values
+print("\nMissing Values:")
+print(df.isnull().sum())
+
+# Basic statistical analysis
+print("\nStatistical Summary:")
+print(df.describe())
+
+# Total COVID-19 cases by country
+country_cases = df.groupby("Country")["Confirmed"].sum().sort_values(ascending=False)
+
+print("\nTotal Confirmed Cases by Country:")
+print(country_cases)
+
+# Total deaths by country
+country_deaths = df.groupby("Country")["Deaths"].sum().sort_values(ascending=False)
+
+print("\nTotal Deaths by Country:")
+print(country_deaths)
+
+# Total recovered cases by country
+country_recovered = df.groupby("Country")["Recovered"].sum().sort_values(ascending=False)
+
+print("\nTotal Recovered Cases by Country:")
+print(country_recovered)
+
+# ---------------- Visualization ----------------
+
+# 1. Confirmed cases by country
+plt.figure(figsize=(8, 5))
+country_cases.plot(kind="bar")
+plt.title("Total Confirmed COVID-19 Cases by Country")
+plt.xlabel("Country")
+plt.ylabel("Confirmed Cases")
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.show()
+
+# 2. Deaths by country
+plt.figure(figsize=(8, 5))
+country_deaths.plot(kind="bar")
+plt.title("Total COVID-19 Deaths by Country")
+plt.xlabel("Country")
+plt.ylabel("Deaths")
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.show()
+
+# 3. Recovered cases by country
+plt.figure(figsize=(8, 5))
+country_recovered.plot(kind="bar")
+plt.title("Total Recovered COVID-19 Cases by Country")
+plt.xlabel("Country")
+plt.ylabel("Recovered Cases")
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.show()
+
+# 4. COVID-19 trend over time
+df["Date"] = pd.to_datetime(df["Date"])
+
+daily_cases = df.groupby("Date")["Confirmed"].sum()
+
+plt.figure(figsize=(10, 5))
+daily_cases.plot(kind="line")
+plt.title("COVID-19 Confirmed Cases Over Time")
+plt.xlabel("Date")
+plt.ylabel("Confirmed Cases")
+plt.grid()
+plt.tight_layout()
+plt.show()
+
+# 5. Active cases by country
+active_cases = df.groupby("Country")["Active"].sum().sort_values(ascending=False)
+
+plt.figure(figsize=(8, 5))
+active_cases.plot(kind="bar")
+plt.title("Active COVID-19 Cases by Country")
+plt.xlabel("Country")
+plt.ylabel("Active Cases")
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.show()
+
+
+```
+
 
 ## OUTPUT:
+<img width="635" height="697" alt="image" src="https://github.com/user-attachments/assets/bd0338ba-fe8e-4cae-90d8-d5b095f98e53" />
+![Uploading image.png…]()
 
-*(Paste the execution output showing the dataset information, statistical summary, and generated Line Graph, Bar Chart, Pie Chart, Scatter Plot, and Histogram.)*
+![Uploading image.png…]()
+![Uploading image.png…]()
+
+![Uploading image.png…]()
+![Uploading image.png…]()
+![Uploading image.png…]()
+![Uploading image.png…]()
+
 
 ## RESULT:
 
